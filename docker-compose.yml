@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+    orion-bootcamp-front-end:
+        container_name: civitas-web-teste
+        image: orion-bootcamp-front-end
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - .:/app
+            - /app/node_modules
+        ports:
+            - 3004:3004
+            - 9877:9877
+        restart: unless-stopped

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+simple-snack-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-mdc-snack-bar-container {
+    &.error-snackbar {
+        --mdc-snackbar-container-color: #DBD5E9; //background snackbar
+        --mdc-snackbar-supporting-text-color: #000; //color text snackbar
+
+        .mdc-button__label {
+            margin-left: 0.6rem;
+            color: #65558F;
+        }
+    }
+
+    &.sucess-snackbar {
+        .mdc-button__label {
+            margin-left: 0.6rem;
+            color: #65558F;
+        }
+    }
+
+}
