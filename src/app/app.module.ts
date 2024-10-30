@@ -18,6 +18,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ButtonComponent } from './components/button/button.component';
 import { MatIconModule } from '@angular/material/icon';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
     BackButtonComponent,
     ButtonComponent,
     SnackbarComponent,
+    SidebarComponent,
   ],
   imports: [
     AppRoutingModule,
