@@ -19,7 +19,7 @@ export class AdminScreenComponent {
   ]
 
   cardsAdmin: IAdminScreenCard[] = [
-    { title: 'Cadastrar Turmas', image: 'assets/admin-screen-cards/cadastro.jpg' }
+    { title: 'Cadastrar Turmas', image: 'assets/admin-screen-cards/cadastro.jpg' },
   ];
 
   constructor(private router: Router) { }

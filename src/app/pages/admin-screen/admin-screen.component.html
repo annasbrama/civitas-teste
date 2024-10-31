@@ -1,19 +1,5 @@
 <main>
-    <section class="sidebar-section">
-        <div class="sidebar">
-            <div class="top-icon" *ngFor="let option of logoDesktop">
-                <img [src]="option.image">
-            </div>
-            <div class="mobile" *ngFor="let option of logoMobile">
-                <img [src]="option.image">
-            </div>
-            <div class="logout-box">
-                <button (click)="logout()">Sair</button>    
-                <span>V.1.0.0</span>
-            </div>
-        </div>
-    </section>
-    <!-- ==== CONTENT ==== -->
+    <app-sidebar></app-sidebar>
     <section class="main-section">
         <div class="content-wrapper">
             <h1>
@@ -24,7 +10,8 @@
                     Prazer, somos o Civitas! <br><br>
                     Vamos juntos nessa missão de desenvolver nossos estudantes para que desenvolvam habilidades
                     comportamentais importantes para o dia a dia da vida deles.<br><br>
-                    Nosso primeiro passo é o cadastro de informações necessárias para que os usuários sejam registrados para que acessem à plataforma. <br>
+                    Nosso primeiro passo é o cadastro de informações necessárias para que os usuários sejam registrados
+                    para que acessem à plataforma. <br>
                     Vamos lá?
                 </p>
             </div>
@@ -39,11 +26,4 @@
             </div>
         </div>
     </section>
-    <!-- ===== FOOTER MOBILE ===== -->
-    <footer>
-        <div class="logout-mobile">
-            <a href="#">Sair</a>
-            <span>V.1.0.0</span>
-        </div>
-    </footer>
 </main>
