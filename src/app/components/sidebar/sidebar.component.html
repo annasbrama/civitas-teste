@@ -4,25 +4,10 @@
             <img [src]="option.image">
         </div>
         <div class="sidebar-menu">
-            <div class="menu">
-                <button class="btn-menu" mat-button>
-                    <mat-icon fontSet="material-icons-outlined">home</mat-icon>
-                    Início
-                </button>
-
-                <button class="btn-menu" mat-button>
-                    <mat-icon class="material-icons-outlined icon-fixed">school</mat-icon>
-                    Turmas
-                </button>
-
-                <button class="btn-menu" mat-button>
-                    <mat-icon class="material-icons-outlined icon-fixed">person</mat-icon>
-                    Professores
-                </button>
-
-                <button  class="btn-menu"mat-button>
-                    <mat-icon class="material-icons-outlined icon-fixed">groups</mat-icon>
-                    Estudantes
+            <div class="menu" *ngFor="let option of icons">
+                <button class="btn-menu">
+                    <img class="svg" [src]="option.image">
+                    {{option.name}}
                 </button>
             </div>
         </div>
