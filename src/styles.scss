@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'https://fonts.googleapis.com/css2?family=Material+Icons+Outlined';
+mat-icon {
+    font-variation-settings: 'FILL' 0, 'wght' 100, 'GRAD' 0, 'opsz' 48;
+  }
 
 * {
     margin: 0;
@@ -35,7 +39,7 @@ simple-snack-bar {
             background-color: #F3EDF7;
         }
 
-        .mdc-button__label{
+        .mdc-button__label {
             letter-spacing: -0.2px;
         }
     }

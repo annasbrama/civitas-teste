@@ -3,6 +3,29 @@
         <div class="top-icon" *ngFor="let option of logoDesktop">
             <img [src]="option.image">
         </div>
+        <div class="sidebar-menu">
+            <div class="menu">
+                <button class="btn-menu" mat-button>
+                    <mat-icon fontSet="material-icons-outlined">home</mat-icon>
+                    Início
+                </button>
+
+                <button class="btn-menu" mat-button>
+                    <mat-icon class="material-icons-outlined icon-fixed">school</mat-icon>
+                    Turmas
+                </button>
+
+                <button class="btn-menu" mat-button>
+                    <mat-icon class="material-icons-outlined icon-fixed">person</mat-icon>
+                    Professores
+                </button>
+
+                <button  class="btn-menu"mat-button>
+                    <mat-icon class="material-icons-outlined icon-fixed">groups</mat-icon>
+                    Estudantes
+                </button>
+            </div>
+        </div>
         <div class="mobile" *ngFor="let option of logoMobile">
             <img [src]="option.image">
         </div>

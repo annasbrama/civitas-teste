@@ -15,7 +15,7 @@ section {
     min-height: 80vh;
     min-width: 172px;
     flex-grow: 1;
-    padding: 3.3rem;
+    padding: 0.5rem;
     position: fixed;
     top: 10%;
     left: 0;
@@ -47,6 +47,57 @@ section {
                 margin-bottom: 0.8rem;
                 border-radius: 50%;
             }
+        }
+
+        .sidebar-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 4rem;
+            gap: 10px;
+
+            .menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 4rem;
+                gap: 10px;
+
+                .icon-fixed {
+                    font-size: 30px;
+                    font-weight: 100;
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .btn-menu {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    width: 100%;
+                    justify-content: flex-start;
+                    color: black;
+                    background: transparent;
+                    padding: 12px 16px;
+                    border-radius: 12px;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+
+                    mat-icon {
+                        font-size: 30px;
+                        width: 30px;
+                        height: 30px;
+                        font-weight: 100;
+                      }
+                }
+
+                .btn-menu:hover {
+                    background: #E8DEF8;
+                }
+            }
+
         }
 
         .mobile {
