@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
-import { IAdminScreenCard, ILogo } from 'src/app/interface';
+import { IAdminScreenCard, ILogo, ISidebarIcons } from 'src/app/interface';
 
 @Component({
   selector: 'app-admin-screen',
@@ -9,7 +9,14 @@ import { IAdminScreenCard, ILogo } from 'src/app/interface';
 })
 
 export class AdminScreenComponent {
-  
+
+  icons: ISidebarIcons[] = [
+    { name: "Início", image: 'assets/icons-sidebar/inicio.svg' },
+    { name: "Turmas", image: 'assets/icons-sidebar/turmas.svg' },
+    { name: "Professores", image: 'assets/icons-sidebar/professores.svg' },
+    { name: "Estudantes", image: 'assets/icons-sidebar/estudantes.svg' }
+  ];
+
   logoDesktop: ILogo[] = [
     { name: "Logo Civitas", image: 'assets/civitas-logos/logo_civitas_sem_fundo.webp' }
   ];
@@ -24,14 +31,14 @@ export class AdminScreenComponent {
 
   constructor(private router: Router) { }
 
-// ======================================
-//Direcionamento do botão de "Cadastrar Turmas" para a página de cadastro.
+  // ======================================
+  //Direcionamento do botão de "Cadastrar Turmas" para a página de cadastro.
   intoToClassRegistration() {
     this.router.navigate(['/class-registration']);
   }
 
   //Direcionamento do botão "Sair" para a página de login do administrador.
-  logout(){
+  logout() {
     this.router.navigate(['/admin-login']);
   }
 }
