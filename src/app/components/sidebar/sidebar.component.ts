@@ -18,15 +18,7 @@ export class SidebarComponent {
     { name: "Civitas - logo em azul com escrita em preto", image: 'assets/civitas-logos/logo_completo_horizontal_civitas.webp' }
   ]
 
-  @Input() name: string = '';
-  @Input() className: string = '';
-
-  icons: ISidebarIcons[] = [
-  { name: "Início", image: 'assets/icons-sidebar/inicio.svg'},
-  { name: "Turmas", image: 'assets/icons-sidebar/turmas.svg'},
-  { name: "Professores", image: 'assets/icons-sidebar/professores.svg'},
-  { name: "Estudantes", image: 'assets/icons-sidebar/estudantes.svg'},
-]
+  @Input() menuIcons: ISidebarIcons[] = [];
 
   constructor(private router: Router) { }
 
