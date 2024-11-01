@@ -1,0 +1,123 @@
+@import '../../styles/variables.scss';
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .main-section {
+        // flex-grow: 3;
+        margin: 5rem 0 0 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+            max-width: 56rem;
+            width: 100%;
+
+            h1 {
+                font-size: 2.8rem;
+                font-weight: 500;
+                margin-bottom: 3rem;
+                color: $fourth-color;
+            }
+
+            .content {
+                flex: 1;
+                font-size: 1rem;
+                font-weight: 400;
+                width: 80%;
+
+                h2 {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                }
+            }
+
+            .btn-content {
+                background: $primary-color;
+                border: none;
+                border-radius: 25px;
+                margin-top: 2rem;
+                margin-bottom: 2.5rem;
+                font-weight: 400;
+                font-size: 0.7rem;
+                padding: 0.5rem 0.5rem;
+                width: 18%;
+                height: 25%;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .btn-content:hover {
+                background: $button-register-color;
+                color: #fff;
+            }
+
+            .video-wrapper {
+                flex: 1;
+                width: 100%;
+            }
+        }
+
+
+    }
+
+    /* ==== MOBILE ===== */
+    @media (max-width: 1200px) {
+        .main-section {
+            margin-right: -4rem;
+        }
+    }
+
+    @media (max-width: 940px) {
+        .main-section {
+            margin-left: 12rem;
+            width: 70%;
+
+            .content-wrapper h1 {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    @media (max-width: 830px) {
+        flex-direction: column;
+
+        .main-section {
+            margin: 1rem auto;
+            width: 100%;
+
+            .content-wrapper {
+                padding: 3rem;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                h1 {
+                    font-size: 2rem;
+                    width: 80%;
+                }
+
+                .btn-content {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

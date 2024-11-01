@@ -19,6 +19,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { MatIconModule } from '@angular/material/icon';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { TeacherScreenComponent } from './pages/teacher-screen/teacher-screen.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     ButtonComponent,
     SnackbarComponent,
     SidebarComponent,
+    TeacherScreenComponent,
   ],
   imports: [
     AppRoutingModule,
