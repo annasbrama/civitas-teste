@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TeacherRegistrationComponent } from './pages/teacher-registration/teacher-registration.component';
+import { StudentRegistrationComponent } from './pages/student-registration/student-registration.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { TeacherRegistrationComponent } from './pages/teacher-registration/teach
     SnackbarComponent,
     SidebarComponent,
     TeacherRegistrationComponent,
+    StudentRegistrationComponent,
   ],
   imports: [
     AppRoutingModule,
