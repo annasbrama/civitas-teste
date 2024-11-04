@@ -30,13 +30,14 @@ main {
                 font-size: 1rem;
                 font-weight: 400;
                 width: 100%;
-                gap: 70px;
+                gap: 40px;
 
                 .text-wrapper {
                     width: 48%;
 
                     h2 {
                         font-size: 2rem;
+                        margin-bottom: 0.8rem;
                         font-weight: 400;
                     }
 
@@ -44,8 +45,7 @@ main {
                         background: $primary-color;
                         border: none;
                         border-radius: 25px;
-                        margin-top: 2rem;
-                        margin-bottom: 2.5rem;
+                        margin-top: 0.8rem;
                         font-weight: 400;
                         font-size: 0.7rem;
                         padding: 0.5rem 1rem;
