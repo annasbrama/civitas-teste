@@ -11,10 +11,10 @@ import { IAdminScreenCard, ILogo, ISidebarIcons } from 'src/app/interface';
 export class AdminScreenComponent {
 
   icons: ISidebarIcons[] = [
-    { name: "Início", image: 'assets/icons-sidebar/inicio.svg' },
-    { name: "Turmas", image: 'assets/icons-sidebar/turmas.svg' },
-    { name: "Professores", image: 'assets/icons-sidebar/professores.svg' },
-    { name: "Estudantes", image: 'assets/icons-sidebar/estudantes.svg' }
+    { name: "Início", image: 'assets/icons-sidebar/inicio.svg', route: '/' },
+    { name: "Turmas", image: 'assets/icons-sidebar/turmas.svg', route: '#' },
+    { name: "Professores", image: 'assets/icons-sidebar/professores.svg', route: '#' },
+    { name: "Estudantes", image: 'assets/icons-sidebar/estudantes.svg', route:'#' }
   ];
 
   logoDesktop: ILogo[] = [
