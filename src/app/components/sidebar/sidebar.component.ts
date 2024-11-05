@@ -21,8 +21,13 @@ export class SidebarComponent {
   @Input() menuIcons: ISidebarIcons[] = [];
 
   constructor(private router: Router) { }
+//Roteamento dos icons do sidebar
+navigateTo(route: string):void {
+  this.router.navigate([route]);
+}
 
-  logout() {
-    this.router.navigate(['/select-profile'])
-  }
+//Roteamento do botão sair do sidebar
+logout():void {
+  this.router.navigate(['/admin-login'])
+}
 }
