@@ -1,0 +1,116 @@
+@import '../../styles/variables.scss';
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .main-section {
+        margin: 5rem 0 0 14rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 70rem;
+
+        .content-wrapper {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+
+            h1 {
+                font-size: 3.2rem;
+                font-weight: 500;
+                margin-bottom: 3rem;
+                color: $fourth-color;
+            }
+
+            .content {
+                display: flex;
+                font-size: 1rem;
+                font-weight: 400;
+                width: 100%;
+                gap: 40px;
+
+                .text-wrapper {
+                    width: 48%;
+
+                    h2 {
+                        font-size: 2rem;
+                        margin-bottom: 0.8rem;
+                        font-weight: 400;
+                    }
+
+                    .btn-content {
+                        background: $primary-color;
+                        border: none;
+                        border-radius: 25px;
+                        margin-top: 0.8rem;
+                        font-weight: 400;
+                        font-size: 0.7rem;
+                        padding: 0.5rem 1rem;
+                        width: 32%;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                    }
+
+                    .btn-content:hover {
+                        background: $button-register-color;
+                        color: #fff;
+                    }
+                }
+
+                .video-wrapper {
+                    padding-left: 4rem;
+                    width: 455px;
+                    height: 220px;
+                    background-color: $primary-color;
+                    border-radius: 75px;
+                }
+            }
+        }
+    }
+
+    /* ==== MOBILE ===== */
+    @media (max-width: 1200px) {
+        .main-section {
+            margin-right: -4rem;
+        }
+    }
+
+    @media (max-width: 940px) {
+        .main-section {
+            margin-left: 12rem;
+            width: 70%;
+
+            .content-wrapper h1 {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    @media (max-width: 830px) {
+        flex-direction: column;
+
+        .main-section {
+            margin: 1rem auto;
+            width: 100%;
+
+            .content-wrapper {
+                padding: 3rem;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                h1 {
+                    font-size: 2rem;
+                    width: 80%;
+                }
+
+                .btn-content {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
