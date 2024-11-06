@@ -16,8 +16,8 @@ export class StudentRegistrationComponent {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      nome: ['', Validators.required],
-      matricula: ['', Validators.required],
+      nome: ['', Validators.required, Validators.maxLength(50)],
+      matricula: ['', Validators.required, Validators.maxLength(20)],
       turma: ['', Validators.required],
       cpfResponsavel: ['', [Validators.required, Validators.pattern(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/), Validators.maxLength(14)]],
       cpfOrRg: ['', [Validators.required, this.cpfOrRgValidator, Validators.maxLength(14)]]
