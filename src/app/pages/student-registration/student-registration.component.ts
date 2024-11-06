@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackbarService } from 'src/app/components/snackbar/snackbar.service';
 import { Router } from '@angular/router';
@@ -14,22 +14,52 @@ export class StudentRegistrationComponent {
 
   constructor(private fb: FormBuilder, private snackBar: MatSnackBar, private snackbarService: SnackbarService, private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.form = this.fb.group({
       nome: ['', Validators.required],
       matricula: ['', Validators.required],
       // turma: ['', Validators.required],
-      cpfResponsavel: ['', [Validators.required, Validators.maxLength(11)]],
-      cpfOuRg: ['', [Validators.required, Validators.maxLength(11)]]
+      cpfResponsavel: ['', [Validators.required, Validators.pattern(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/), Validators.maxLength(14)]],
+      cpfOrRg: ['', [Validators.required, this.cpfOrRgValidator, Validators.maxLength(14)]]
     });
   }
+
+  /** cpfOuRgValidator
+ * Validador para verificar se o valor de entrada é CPF ou RG válido.
+ * 
+ * Esta função verifica se o valor de um campo corresponde ao formato esperado de um CPF ou de um RG (variando de 7 a 14 dígitos, com ou sem pontos e hífen).
+ * Se o valor corresponder a um dos formatos, a função retorna "null", indicando que o valor é válido.
+ * Caso contrário, ela retorna um objeto de erro { invalidCpfOrRg: true }.
+ *
+ * Estrutura dos Padrões de Regex
+ * - CPF: O formato 000.000.000-00 é esperado, onde cada 0(zero) representa um dígito numérico.
+ * - RG: Permite uma sequência de 7 a 14 dígitos, separada por pontos e/ou hífen, dependendo das variações regionais dos estados brasileiros.
+ * 
+ * @param control O controle do formulário a ser validado.
+ * @returns "null" se o valor é um CPF ou RG válido; caso contrário, retorna { invalidCpfOrRg: true }.
+ */
+
+  cpfOrRgValidator(control: AbstractControl): ValidationErrors | null {
+    const value = control.value;
+
+    const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+
+    const rgRegex = /^(\d{1,2}\.?\d{3}\.?\d{3}-?\d{1,2}|\d{7,14})$/;
+
+    if (cpfRegex.test(value) || rgRegex.test(value)) {
+      return null;
+    }
+
+    return { invalidCpfOrRg: true };
+  }
+
   //=================================
   //Botão voltar 
-  goBack() {
+  goBack(): void {
     this.router.navigate(['/admin-screen'])
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.form.valid) {
       this.showSuccessMessage()
     } else {
@@ -37,7 +67,7 @@ export class StudentRegistrationComponent {
     }
   }
 
-  showSuccessMessage() {
+  showSuccessMessage(): void {
     this.snackBar.open('Estudante cadastrado com sucesso!', '', {
       duration: 3000,
       panelClass: ['sucess-snackbar'],
@@ -49,7 +79,7 @@ export class StudentRegistrationComponent {
     }, 3500);
   }
 
-  errorMessage() {
+  errorMessage(): void {
     this.snackbarService.showErrorMessage(
       'Estudante já existe no cadastro',
       'Verifique as informações digitadas ou digite novas informações.'
