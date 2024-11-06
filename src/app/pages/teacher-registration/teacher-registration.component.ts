@@ -16,28 +16,29 @@ export class TeacherRegistrationComponent {
 
   ngOnInit() {
     this.form = this.fb.group({
-      nome: ['', Validators.required],
-      matricula: ['', Validators.required],
-      // turma: ['', Validators.required],
-      escola: ['', Validators.required],
-      cpf: ['', [Validators.required, Validators.maxLength(11)]]
+      nome: ['', Validators.required, Validators.maxLength(50)],
+      matricula: ['', Validators.required, Validators.maxLength(20)],
+      turma: ['', Validators.required],
+      cpf: ['', [Validators.required, Validators.pattern(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/), Validators.maxLength(14)]]
     });
   }
+
+
   //=================================
   //Botão voltar 
-  goBack() {
+  goBack(): void {
     this.router.navigate(['/admin-screen'])
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.form.valid) {
-      this.showSuccessMessage()
+      this.showSuccessMessage();
     } else {
       this.errorMessage();
     }
   }
 
-  showSuccessMessage() {
+  showSuccessMessage(): void {
     this.snackBar.open('Professor(a) cadastrado com sucesso!', '', {
       duration: 3000,
       panelClass: ['sucess-snackbar'],
@@ -49,7 +50,7 @@ export class TeacherRegistrationComponent {
     }, 3500);
   }
 
-  errorMessage() {
+  errorMessage(): void {
     this.snackbarService.showErrorMessage(
       'Professor já existe no cadastro',
       'Cadastre um novo professor ou edite os professores cadastrados.'
