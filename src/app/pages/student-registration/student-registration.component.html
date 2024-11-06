@@ -27,16 +27,16 @@
                     <input matInput formControlName="matricula" placeholder="Fundamental">
                 </mat-form-field>
             </div>
-            <!-- <div class="form-card">
+            <div class="form-card">
                 <mat-form-field appearance="outline" floatLabel="always">
                     <mat-label>Turmas</mat-label>
-                    <mat-select formControlName="turmas" placeholder="6 série B">
-                        <mat-option *ngFor="let option of ensino" [value]="option.value">
+                    <mat-select formControlName="turma" placeholder="6 série B">
+                        <mat-option *ngFor="let option of turma" [value]="option.value">
                             {{option.label}}
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
-            </div> -->
+            </div>
             <div class="form-card">
                 <mat-form-field appearance="outline" floatLabel="always">
                     <mat-label>CPF do responsável</mat-label>

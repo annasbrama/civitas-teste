@@ -18,7 +18,7 @@ export class StudentRegistrationComponent {
     this.form = this.fb.group({
       nome: ['', Validators.required],
       matricula: ['', Validators.required],
-      // turma: ['', Validators.required],
+      turma: ['', Validators.required],
       cpfResponsavel: ['', [Validators.required, Validators.pattern(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/), Validators.maxLength(14)]],
       cpfOrRg: ['', [Validators.required, this.cpfOrRgValidator, Validators.maxLength(14)]]
     });
