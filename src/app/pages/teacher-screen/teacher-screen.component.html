@@ -2,10 +2,12 @@
     <app-sidebar [menuIcons]="icons"></app-sidebar>
     <section class="main-section">
         <div class="content-wrapper">
-            <h1>Plano de Desenvolvimento Individual</h1>
+            <div class="title-wrapper">
+                <h1>Plano de Desenvolvimento Individual</h1>
+            </div>
             <div class="content">
                 <div class="text-wrapper">
-                    <h2>{{ greeting }}, [Primeiro nome]!</h2>
+                    <h2>{{ greeting }}, professor(a)!</h2>
                     <p>Vamos juntos acompanhar a evolução dos nossos estudantes? <br><br>
 
                         O objetivo da Civitas é ter alunos em foco para crescer inteligente com os PDIs! Nos
@@ -16,14 +18,14 @@
                         emocional,
                         responsabilidade e organização. <br><br>
 
-                        Acesse suas turmas <strong>[nome da escola]</strong> para começar a criar PDIs para os seus
+                        Acesse suas turmas para começar a criar PDIs para os seus
                         estudantes!</p>
-                    <button class="btn-content">Acessar minhas turmas</button>
+                    <button (click)="intoToListingClasses()" class="btn-content">Acessar minhas turmas</button>
                 </div>
                 <div class="video-wrapper">
-                </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/k85mRPqvMbE?si=H6be5XbmeJNzgsw-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
             </div>
         </div>
-
     </section>
 </main>
