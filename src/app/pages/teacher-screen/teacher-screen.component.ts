@@ -10,7 +10,7 @@ import { ISidebarIcons } from 'src/app/interface';
 export class TeacherScreenComponent {
   icons: ISidebarIcons[] = [
     { name: "Início", image: 'assets/icons-sidebar/inicio.svg', route: '/' },
-    { name: "Turmas", image: 'assets/icons-sidebar/turmas.svg', route: 'main/listing-classes' },
+    { name: "Turmas", image: 'assets/icons-sidebar/turmas.svg', route: 'main/listing-class' },
   ];
 
   constructor(private router: Router) { }
